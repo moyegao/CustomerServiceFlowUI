@@ -1,0 +1,60 @@
+html,
+body,
+#app {
+  height: 100%;
+}
+html{
+  font-size: 100px;
+}
+#app .el-dialog {
+  width: 80%;
+}
+body {
+  /* font-size: 12px; */
+}
+ul > li {
+  list-style: none;
+}
+body,
+ul,
+ol,
+tr,
+th,
+td,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #606266;
+  text-decoration: none;
+}
+.clear:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.el-table th,
+.el-table td {
+  padding: 0px 0;
+  text-align: center;
+}
+
+#app .el-pagination {
+  text-align: right;
+  /* border-right: 10px solid #EAF4FF; */
+}
+body .el-table th.gutter {
+  display: table-cell !important;
+}

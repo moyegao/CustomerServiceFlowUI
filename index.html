@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE11" />
+    <!-- <meta http-equiv="x-ua-compatible" content="IE=EmulateIE10" />
+    <meta http-equiv="x-ua-compatible" content="IE=EmulateIE9" /> -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <script type="text/javascript" src="static/js/jquery.js"></script>
+    <script type="text/javascript">
+      var userAgent = navigator.userAgent;  
+      var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1; //判断是否IE<11浏览器  
+      var isEdge = userAgent.indexOf("Edge") > -1 && !isIE; //判断是否IE的Edge浏览器  
+      var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1;
+      
+      if (isIE) {
+        var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+        reIE.test(userAgent);
+        var fIEVersion = parseFloat(RegExp["$1"]);
+        if (fIEVersion < 9) {
+          alert('对不起，您无法登陆系统，可能存在以下原因：\n1. 您的浏览器版本过低，请使用IE9及以上版本的浏览器登录！\n2. 您的浏览器可能处于兼容模式，请在IE设置里取消兼容模式');
+        }
+      }
+    </script>
+    <script type="text/javascript" src="static/js/jquery.form.js"></script>
+    <script type="text/javascript" src="static/addone/artdialog/dialog-min.js"></script>
+    <script type="text/javascript" src="static/addone/artdialog/dialog-plus.js"></script>
+    <script type="text/javascript" src="static/addone/tree/mytree.js"></script>
+    <script type="text/javascript" src="static/addone/staffselector/selector.js"></script>
+    <script type="text/javascript" src="static/js/approval.js"></script>
+    <script type="text/javascript" src="static/js/common.js"></script>
+    <title>工作督办系统</title>
+
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
